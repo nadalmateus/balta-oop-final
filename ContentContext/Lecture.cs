@@ -1,7 +1,7 @@
-using Balta.ContentContext.Enums;
-
 namespace Balta.ContentContext
 {
+    using Enums;
+
     public class Lecture
     {
         public int Order { get; set; }
