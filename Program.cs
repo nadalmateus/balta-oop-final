@@ -7,9 +7,9 @@ namespace balta
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             var course = new Course();
+
 
         }
     }

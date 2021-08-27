@@ -2,7 +2,7 @@ using System;
 
 namespace Balta.ContentContext
 {
-    public class Content
+    public abstract class Content
     {
         public Content()
         {
