@@ -1,16 +1,19 @@
-﻿using System;
-using Balta.ContentContext;
-
-namespace balta
+﻿namespace balta
 {
-    class Program
+    using System.Net.Mime;
+    using Balta.ContentContext;
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-
             var course = new Course();
+            course.Level = Balta.ContentContext.Enums.EContentLevel.Beginner;
 
+            foreach (var item in course.Modules)
+            {
 
+            }
         }
     }
 }
