@@ -1,14 +1,15 @@
 ﻿namespace balta
 {
+    using Balta.ContentContext;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Balta.ContentContext;
 
     internal class Program
     {
         private static void Main(string[] args)
         {
-            List<Article> articles = new List<Article>();
+            List<Article> articles = new();
             articles.Add(new Article("Artigo OOP", "orientação a objetos"));
             articles.Add(new Article("Artigo C#", "orientação a objetos"));
             articles.Add(new Article("Artigo .NET", "orientação a objetos"));
@@ -21,24 +22,24 @@
             //     System.Console.WriteLine(article.Url);
             // }
 
-            var courses = new List<Course>();
-            var courseCSharp = new Course("Fundamentos C#", "OOP");
-            var courseDotNet = new Course("Fundamentos .NET", "OOP");
+            List<Course> courses = new();
+            Course courseCSharp = new("Fundamentos C#", "OOP");
+            Course courseDotNet = new("Fundamentos .NET", "OOP");
             courses.Add(courseCSharp);
 
 
-            var careers = new List<Career>();
-            var careerDotnet = new Career("Desenvolvedor", "OOP");
-            var careerItem = new CareerItem(1, "C#", "OOP", courseCSharp);
+            List<Career> careers = new();
+            Career careerDotnet = new("Desenvolvedor", "OOP");
+            CareerItem careerItem = new(1, "C#", "OOP", courseCSharp);
             careerDotnet.Items.Add(careerItem);
             careers.Add(careerDotnet);
 
-            foreach (var career in careers)
+            foreach (Career career in careers)
             {
-                System.Console.WriteLine(career.Title);
-                foreach (var item in career.Items.OrderByDescending(x => x.Order))
+                Console.WriteLine(career.Title);
+                foreach (CareerItem item in career.Items.OrderByDescending(x => x.Order))
                 {
-                    System.Console.WriteLine($"{item.Order} - {item.Title}");
+                    Console.WriteLine($"{item.Order} - {item.Title}");
                 }
             }
         }

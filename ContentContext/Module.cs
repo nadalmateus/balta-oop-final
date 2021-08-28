@@ -2,7 +2,7 @@ namespace Balta.ContentContext
 {
     using System.Collections.Generic;
 
-    public class Module
+    public class Module : Base
     {
         public Module()
         {
