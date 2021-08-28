@@ -1,5 +1,7 @@
 namespace Balta.ContentContext
 {
+    using NotificationContext;
+
     public class CareerItem : Base
     {
         public CareerItem(int order, string title, string description, Course course)
@@ -8,6 +10,12 @@ namespace Balta.ContentContext
             Title = title;
             Description = description;
             Course = course;
+
+
+            if (course == null)
+            {
+                AddNotification(new Notification("Course", "Curso Invalido"));
+            }
         }
 
         public int Order { get; set; }
