@@ -1,5 +1,6 @@
 namespace Balta.ContentContext
 {
+    using SharedContext;
     using System.Collections.Generic;
 
     public class Module : Base

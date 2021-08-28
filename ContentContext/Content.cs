@@ -1,5 +1,7 @@
 namespace Balta.ContentContext
 {
+    using SharedContext;
+
     public abstract class Content : Base
     {
         public Content(string title, string url)

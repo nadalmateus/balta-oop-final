@@ -1,4 +1,4 @@
-namespace Balta.ContentContext
+namespace Balta.SharedContext
 {
     using NotificationContext;
     using System;
