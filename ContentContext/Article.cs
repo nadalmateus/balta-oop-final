@@ -1,7 +1,4 @@
 namespace csharp.ContextContent
 {
-    public class Article : Content
-    {
-
-    }
+    public class Article : Content { }
 }
